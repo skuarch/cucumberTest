@@ -1,4 +1,4 @@
-package cucumber;
+package application;
 
 import application.DemoApplication;
 import application.logic.EndPoints;
@@ -16,6 +16,8 @@ import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.util.Assert;
+import static org.springframework.util.Assert.noNullElements;
 
 @ContextConfiguration
 @SpringBootTest(classes = DemoApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -48,6 +50,7 @@ public class CucumberSteps {
     public void the_client_receives_users_list() throws Throwable {
         List<User> userList = responseEntity.getBody();
         assertNotNull(userList);
+        noNullElements(userList.toArray());
     }
 
 }
