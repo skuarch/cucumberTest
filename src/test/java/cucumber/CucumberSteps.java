@@ -1,5 +1,6 @@
-package application;
+package cucumber;
 
+import application.DemoApplication;
 import application.logic.EndPoints;
 import application.model.entity.User;
 import cucumber.api.java.en.And;
