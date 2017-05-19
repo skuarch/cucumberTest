@@ -1,6 +1,5 @@
 package application;
 
-import application.DemoApplication;
 import application.logic.EndPoints;
 import application.model.entity.User;
 import cucumber.api.java.en.And;
@@ -16,7 +15,6 @@ import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.util.Assert;
 import static org.springframework.util.Assert.noNullElements;
 
 @ContextConfiguration
